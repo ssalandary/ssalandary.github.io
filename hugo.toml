@@ -1,0 +1,83 @@
+baseURL = "https://ssalandary.github.io"
+languageCode = "en-us"
+title = "Salma's Site"
+theme = "soho"
+summarylength = 10
+paginate = 10
+
+enableEmoji = true
+
+[params]
+    mainSections = ["posts"]
+    profilePicture = "https://avatars.githubusercontent.com/u/86086118?v=4"
+
+    author = "Salma Alandary"
+    description = "CS @ UCLA"
+
+    [[params.socialIcons]]
+        icon = "fa-linkedin"
+        title = "Linkedin"
+        url = "https://www.linkedin.com/in/salma-alandary/"
+    [[params.socialIcons]]
+        icon = "fa-github"
+        title = "GitHub"
+        url = "https://github.com/ssalandary"
+    [[params.socialIcons]]
+        icon = "fa-twitter"
+        title = "Twitter"
+        url = "https://twitter.com/DalSalma"
+    [[params.socialIcons]]
+        icon = "fa-envelope"
+        title = "Mail"
+        url = "mailto:ssalandary@gmail.com"
+    
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+
+[menu]
+    [[menu.main]]
+        name = "About me"
+        identifier = "about"
+        weight = 100
+        url = "/about-me/"
+    [[menu.main]]
+        name = "Blog"
+        identifier = "posts"
+        weight = 200
+        url = "/posts/"
+
+[markup]
+    defaultMarkdownHandler = "goldmark"
+
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = true
+
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xhtml = false
+
+[markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "github"
+    tabWidth = 4
