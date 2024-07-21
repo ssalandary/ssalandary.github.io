@@ -6,30 +6,30 @@ Check out my blog posts to read about what I'm up to and take a look at my "abou
 Enjoy your stay 😊
 
 <h3>Recent Posts</h3>
-  <div class="posts">
-    {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.MainSections -}}
-    {{- $paginator := .Paginate $pages -}}
+<div class="posts">
+  {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.MainSections -}}
+  {{- $paginator := .Paginate $pages -}}
 
-    {{ range $paginator.Pages }}
-      <article class="post">
-        <h1 class="post-title">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h1>
+  {{ range $paginator.Pages }}
+    <article class="post">
+      <h1 class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
 
-        <div class="post-date">
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> &middot; {{ .ReadingTime }} min read
-        </div>
+      <div class="post-date">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> &middot; {{ .ReadingTime }} min read
+      </div>
 
-        <div>
-          {{ .Summary }}
-        </div>
+      <div>
+        {{ .Summary }}
+      </div>
 
-        <div class="read-more-link">
-          <a href="{{ .Permalink }}">Read More</a>
-        </div>
-      </article>
-    {{- end }}
-  </div>
+      <div class="read-more-link">
+        <a href="{{ .Permalink }}">Read More</a>
+      </div>
+    </article>
+  {{- end }}
+</div>
 
-  {{ template "_internal/pagination.html" . }}
+{{ template "_internal/pagination.html" . }}
 {{- end }}

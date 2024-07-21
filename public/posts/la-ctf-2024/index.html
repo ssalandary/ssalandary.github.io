@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  <title>Flag Finder - LA CTF 2024</title>
+
+  <meta name="description" content="The intended solution for my LA CTF 2024 challenge" />
+
+  <meta itemprop="name" content="Flag Finder - LA CTF 2024">
+<meta itemprop="description" content="The intended solution for my LA CTF 2024 challenge"><meta itemprop="datePublished" content="2024-02-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-02-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="432">
+<meta itemprop="keywords" content="game-hacking,rev,la-ctf," />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Flag Finder - LA CTF 2024"/>
+<meta name="twitter:description" content="The intended solution for my LA CTF 2024 challenge"/>
+
+
+<meta property="og:title" content="Flag Finder - LA CTF 2024" />
+<meta property="og:description" content="The intended solution for my LA CTF 2024 challenge" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/la-ctf-2024/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-18T00:00:00+00:00" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://localhost:1313/#author",
+      "name": "Salma Alandary",
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "https://avatars.githubusercontent.com/u/86086118?v=4"
+        
+      },
+      "description": "CS @ UCLA"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#website",
+      "url": "http://localhost:1313/",
+      "name": "Salma's Site",
+      "description": "CS @ UCLA",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "inLanguage": "en-us"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/la-ctf-2024/#webpage",
+      "url": "http://localhost:1313/posts/la-ctf-2024/",
+      "name": "Flag Finder - LA CTF 2024",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "about": {
+         "@id": "http://localhost:1313/#author"
+      },
+      "datePublished": "2024-02-18T00:00:00+00:00",
+      "dateModified": "2024-02-18T00:00:00+00:00",
+      "description": "The intended solution for my LA CTF 2024 challenge",
+      "inLanguage": "en-us",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:1313/posts/la-ctf-2024/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://localhost:1313/posts/la-ctf-2024/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/posts/la-ctf-2024/#webpage"
+      },
+      "headline": "Flag Finder - LA CTF 2024",
+      "datePublished": "2024-02-18T00:00:00+00:00",
+      "dateModified": "2024-02-18T00:00:00+00:00",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "keywords": [
+        "Game-Hacking",
+        "Rev",
+        "La-Ctf"
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "en-us",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://localhost:1313/posts/la-ctf-2024/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://localhost:1313/">
+            <img src="https://avatars.githubusercontent.com/u/86086118?v=4" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+
+      <h1>Salma&#39;s Site</h1>
+
+      
+      <p class="lead">CS @ UCLA</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="http://localhost:1313/">Home</a>
+        </li>
+        <li>
+          <a href="/about-me/">About me</a>
+        </li><li>
+          <a href="/posts/">Blog</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/salma-alandary/" rel="me" title="Linkedin" target="_blank">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/ssalandary" rel="me" title="GitHub" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/DalSalma" rel="me" title="Twitter" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+      <a href="mailto:ssalandary@gmail.com" rel="me" title="Mail" target="_blank">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">Flag Finder - LA CTF 2024</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2024-02-18T00:00:00Z">Feb 18, 2024</time> <span class="readtime">&middot; 3 min read</span>
+  </div>
+
+  <div>
+  <p>Flag Finder is a challenge I wrote for LA CTF 2024! Despite being one of the main organizers for the event last year, I mostly stuck to logistics and design which is why I&rsquo;m pretty excited to have written something this year.</p>
+<h3 id="me-rambling-life-story-in-front-of-a-recipe">Me Rambling (Life Story in Front of a Recipe)</h3>
+<p>The idea for this challenge comes from me being very into the Undertale community back in 2016. Upon start-up of a new file of Undertale, the &ldquo;fun&rdquo; value in your Undertale save folder will be a random number from 1-100 - where certain &ldquo;fun&rdquo; values trigger certain events. Since certain cool events are locked behind very specific &ldquo;fun&rdquo; values, it wasn&rsquo;t uncommon for fans of the game to manipulate their savefiles to trigger these events.</p>
+<p>Since Undertale is made in GameMaker Studio 2, I wanted to create a very basic &ldquo;Save-Load&rdquo; functionality where you can manipulate your own savefile to access an item that is normally inaccessible.</p>
+<h2 id="intended-solution">Intended Solution</h2>
+<p>Determine this is a Gamemaker Studio 2 game and use the <a href="https://github.com/krzys-h/UndertaleModTool">Undertale Mod Tool</a> to decompile the GML bytecode (located in either <code>data.win</code>, <code>game.ios</code>, or <code>game.unx</code> depending on your distro)</p>
+<p>Utilize the &ldquo;Save/Load&rdquo; function inside of the <code>FlagFinder</code> game to generate the <code>mysave.txt</code> file inside the directory GameMaker has decided to generate files in (for Windows, it&rsquo;s <code>C:\Users\&lt;user&gt;\Appdata\Local\FlagFinder</code>).</p>
+<p>This is a sample savefile (contains player location and the current item they are holding):</p>
+<pre tabindex="0"><code>{ &#34;player_coordinates&#34;: { &#34;x&#34;: 1160.798095703125, &#34;y&#34;: 621.602294921875 }, &#34;item&#34;: 100062.0 }
+</code></pre><p>Using Undertale Mod Tool, locate the main room of the game and extract the instance number of the &ldquo;Key&rdquo; object. Then, replace <code>&quot;item&quot;: &lt;id&gt;</code> in <code>mysave.txt</code> with the instance number you found.
+<img src="https://hackmd.io/_uploads/SJ_YgbehT.png" alt="image">
+(if you double-click on the instance you&rsquo;ll see it corresponds to a &ldquo;key&rdquo; sprite)</p>
+<p>Load your manipulated savefile and give the &ldquo;Key&rdquo; object to the &ldquo;Flag&rdquo; character
+<img src="https://hackmd.io/_uploads/S17NbZgnp.png" alt="image">
+<img src="https://hackmd.io/_uploads/rJ1HbZenp.png" alt="image">
+and you&rsquo;re done!</p>
+<h2 id="some-other-solutions">Some other Solutions</h2>
+<p>This challenge is fairly open-ended by nature so there are several different solutions besides my own. I&rsquo;ll briefly list some (with screenshots):</p>
+<ol>
+<li>You can locate the code the &ldquo;Flag&rdquo; object calls to draw the flag on the screen within UndertaleModTools
+<img src="https://hackmd.io/_uploads/rJlNrWg3p.png" alt="image">
+You can then use something like Python turtle or p5js to draw these lines manually and extract the flag.</li>
+<li>You can also manipulate the item accepted by the &ldquo;Flag&rdquo; object by locating its &ldquo;PreCreate&rdquo; script and changing the value of myItem to that of an item on-screen (normally belonging to another NPC)
+<img src="https://hackmd.io/_uploads/r1rQIWg26.png" alt="image"></li>
+</ol>
+<h2 id="final-details--source">Final Details + Source</h2>
+<p>You can find the source to the game <a href="https://drive.google.com/drive/folders/1XHLMgQZbM0f3BUdG7ZjLrIx--OD1xyJZ?usp=drive_link">here</a> (too big for Github) if you want to take a look around.</p>
+<p>TLDR: all roads lead to Undertale</p>
+
+  </div>
+
+  
+<div>
+  <ul class="tags">
+  <li>
+    <a href="http://localhost:1313/tags/game-hacking/" class="tag-link">Game-Hacking</a>
+  </li>
+  
+  <li>
+    <a href="http://localhost:1313/tags/rev/" class="tag-link">Rev</a>
+  </li>
+  
+  <li>
+    <a href="http://localhost:1313/tags/la-ctf/" class="tag-link">La-Ctf</a>
+  </li>
+  </ul>
+</div>
+
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://localhost:1313/posts/la-ctf-2024/"
+     data-text="Flag Finder - LA CTF 2024"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://localhost:1313/posts/la-ctf-2024/"
+     data-text="Flag Finder - LA CTF 2024"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://localhost:1313/posts/la-ctf-2024/"
+     data-text="Flag Finder - LA CTF 2024"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://localhost:1313/posts/la-ctf-2024/"
+     data-text="Flag Finder - LA CTF 2024"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://localhost:1313/posts/la-ctf-2024/"
+     data-text="Flag Finder - LA CTF 2024"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy;  2024
+
+      
+
+      
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://kit.fontawesome.com/97c585caf6.js" crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  
+
+    
+</body>
+</html>

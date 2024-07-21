@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Salma&#39;s Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Salma&#39;s Site</description>
+    <title>Posts on Salma&#39;s Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Salma&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>📖 About me</title>
-      <link>http://localhost:1313/about-me/</link>
-      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about-me/</guid>
-      <description>Hi, I&amp;rsquo;m Salma! I&amp;rsquo;m currently studying at UCLA&amp;rsquo;s School of Engineering to obtain my Masters in Computer Science.</description>
-    </item>
+    <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Easy Note - B01lers CTF 2024</title>
       <link>http://localhost:1313/posts/b01lers-ctf-2024/</link>

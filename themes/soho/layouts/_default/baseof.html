@@ -8,7 +8,7 @@
   {{ if .IsHome -}}
   <title>{{ .Site.Title }}</title>
   {{- else -}}
-  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+  <title>{{ .Title }}</title>
   {{- end }}
 
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
