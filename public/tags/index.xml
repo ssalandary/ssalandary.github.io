@@ -2,59 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Salma&#39;s Site</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://ssalandary.github.io/tags/</link>
     <description>Recent content in Tags on Salma&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ssalandary.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS33</title>
+      <link>https://ssalandary.github.io/tags/cs33/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ssalandary.github.io/tags/cs33/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Teaching</title>
+      <link>https://ssalandary.github.io/tags/teaching/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ssalandary.github.io/tags/teaching/</guid>
+      <description></description>
+    </item>
     <item>
       <title>B01lers-Ctf</title>
-      <link>http://localhost:1313/tags/b01lers-ctf/</link>
+      <link>https://ssalandary.github.io/tags/b01lers-ctf/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/b01lers-ctf/</guid>
+      <guid>https://ssalandary.github.io/tags/b01lers-ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Binary-Exploitation</title>
-      <link>http://localhost:1313/tags/binary-exploitation/</link>
+      <link>https://ssalandary.github.io/tags/binary-exploitation/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/binary-exploitation/</guid>
+      <guid>https://ssalandary.github.io/tags/binary-exploitation/</guid>
       <description></description>
     </item>
     <item>
       <title>Heap</title>
-      <link>http://localhost:1313/tags/heap/</link>
+      <link>https://ssalandary.github.io/tags/heap/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/heap/</guid>
+      <guid>https://ssalandary.github.io/tags/heap/</guid>
       <description></description>
     </item>
     <item>
       <title>Pwn</title>
-      <link>http://localhost:1313/tags/pwn/</link>
+      <link>https://ssalandary.github.io/tags/pwn/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pwn/</guid>
+      <guid>https://ssalandary.github.io/tags/pwn/</guid>
       <description></description>
     </item>
     <item>
       <title>Game-Hacking</title>
-      <link>http://localhost:1313/tags/game-hacking/</link>
+      <link>https://ssalandary.github.io/tags/game-hacking/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/game-hacking/</guid>
+      <guid>https://ssalandary.github.io/tags/game-hacking/</guid>
       <description></description>
     </item>
     <item>
       <title>La-Ctf</title>
-      <link>http://localhost:1313/tags/la-ctf/</link>
+      <link>https://ssalandary.github.io/tags/la-ctf/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/la-ctf/</guid>
+      <guid>https://ssalandary.github.io/tags/la-ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Rev</title>
-      <link>http://localhost:1313/tags/rev/</link>
+      <link>https://ssalandary.github.io/tags/rev/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rev/</guid>
+      <guid>https://ssalandary.github.io/tags/rev/</guid>
       <description></description>
     </item>
   </channel>

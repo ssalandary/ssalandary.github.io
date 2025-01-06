@@ -2,47 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about-me/</loc>
+    <loc>https://ssalandary.github.io/teaching/cs33-w25/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ssalandary.github.io/tags/cs33/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ssalandary.github.io/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ssalandary.github.io/tags/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ssalandary.github.io/tags/teaching/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ssalandary.github.io/teaching/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ssalandary.github.io/about-me/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/b01lers-ctf/</loc>
+    <loc>https://ssalandary.github.io/tags/b01lers-ctf/</loc>
     <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/binary-exploitation/</loc>
+    <loc>https://ssalandary.github.io/tags/binary-exploitation/</loc>
     <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/b01lers-ctf-2024/</loc>
+    <loc>https://ssalandary.github.io/posts/b01lers-ctf-2024/</loc>
     <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/heap/</loc>
+    <loc>https://ssalandary.github.io/tags/heap/</loc>
     <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://ssalandary.github.io/posts/</loc>
     <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pwn/</loc>
+    <loc>https://ssalandary.github.io/tags/pwn/</loc>
     <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/la-ctf-2024/</loc>
+    <loc>https://ssalandary.github.io/posts/la-ctf-2024/</loc>
     <lastmod>2024-02-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/game-hacking/</loc>
+    <loc>https://ssalandary.github.io/tags/game-hacking/</loc>
     <lastmod>2024-02-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/la-ctf/</loc>
+    <loc>https://ssalandary.github.io/tags/la-ctf/</loc>
     <lastmod>2024-02-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rev/</loc>
+    <loc>https://ssalandary.github.io/tags/rev/</loc>
     <lastmod>2024-02-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://ssalandary.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://ssalandary.github.io/series/</loc>
   </url>
 </urlset>

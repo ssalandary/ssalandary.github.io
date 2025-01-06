@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Salma&#39;s Site</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://ssalandary.github.io/posts/</link>
     <description>Recent content in Posts on Salma&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ssalandary.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Easy Note - B01lers CTF 2024</title>
-      <link>http://localhost:1313/posts/b01lers-ctf-2024/</link>
+      <link>https://ssalandary.github.io/posts/b01lers-ctf-2024/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/b01lers-ctf-2024/</guid>
+      <guid>https://ssalandary.github.io/posts/b01lers-ctf-2024/</guid>
       <description>Baby&amp;rsquo;s first heap pwn! Understanding &amp;ldquo;Use after Free&amp;rdquo; and how the heap is laid out</description>
     </item>
     <item>
       <title>Flag Finder - LA CTF 2024</title>
-      <link>http://localhost:1313/posts/la-ctf-2024/</link>
+      <link>https://ssalandary.github.io/posts/la-ctf-2024/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/la-ctf-2024/</guid>
+      <guid>https://ssalandary.github.io/posts/la-ctf-2024/</guid>
       <description>Quick writeup covering the details of my LA CTF 2024 challenge, &amp;ldquo;Flag Finder&amp;rdquo;</description>
     </item>
   </channel>

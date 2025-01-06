@@ -8,7 +8,7 @@ paginate = 10
 enableEmoji = true
 
 [params]
-    mainSections = ["posts"]
+    mainSections = ["posts", "teaching"]
     profilePicture = "https://avatars.githubusercontent.com/u/86086118?v=4"
 
     author = "Salma Alandary"
@@ -47,6 +47,11 @@ enableEmoji = true
         identifier = "posts"
         weight = 200
         url = "/posts/"
+    [[menu.main]]
+        name = "Teaching"
+        identifier = "teaching"
+        weight = 300
+        url = "/teaching/"
 
 [markup]
     defaultMarkdownHandler = "goldmark"

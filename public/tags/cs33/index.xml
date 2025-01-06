@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS33 on Salma&#39;s Site</title>
+    <link>https://ssalandary.github.io/tags/cs33/</link>
+    <description>Recent content in CS33 on Salma&#39;s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ssalandary.github.io/tags/cs33/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 33: Winter 2025</title>
+      <link>https://ssalandary.github.io/teaching/cs33-w25/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ssalandary.github.io/teaching/cs33-w25/</guid>
+      <description>My resources for CS 33, taught by Professor Sandra Batista in Winter 2025</description>
+    </item>
+  </channel>
+</rss>

@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Salma&#39;s Site</title>
-    <link>http://localhost:1313/</link>
+    <link>https://ssalandary.github.io/</link>
     <description>Recent content on Salma&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ssalandary.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS 33: Winter 2025</title>
+      <link>https://ssalandary.github.io/teaching/cs33-w25/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ssalandary.github.io/teaching/cs33-w25/</guid>
+      <description>My resources for CS 33, taught by Professor Sandra Batista in Winter 2025</description>
+    </item>
     <item>
       <title>📖 About me</title>
-      <link>http://localhost:1313/about-me/</link>
+      <link>https://ssalandary.github.io/about-me/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about-me/</guid>
+      <guid>https://ssalandary.github.io/about-me/</guid>
       <description>Hi, I&amp;rsquo;m Salma! I&amp;rsquo;m currently studying at UCLA&amp;rsquo;s School of Engineering to obtain my Masters in Computer Science.</description>
     </item>
     <item>
       <title>Easy Note - B01lers CTF 2024</title>
-      <link>http://localhost:1313/posts/b01lers-ctf-2024/</link>
+      <link>https://ssalandary.github.io/posts/b01lers-ctf-2024/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/b01lers-ctf-2024/</guid>
+      <guid>https://ssalandary.github.io/posts/b01lers-ctf-2024/</guid>
       <description>Baby&amp;rsquo;s first heap pwn! Understanding &amp;ldquo;Use after Free&amp;rdquo; and how the heap is laid out</description>
     </item>
     <item>
       <title>Flag Finder - LA CTF 2024</title>
-      <link>http://localhost:1313/posts/la-ctf-2024/</link>
+      <link>https://ssalandary.github.io/posts/la-ctf-2024/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/la-ctf-2024/</guid>
+      <guid>https://ssalandary.github.io/posts/la-ctf-2024/</guid>
       <description>Quick writeup covering the details of my LA CTF 2024 challenge, &amp;ldquo;Flag Finder&amp;rdquo;</description>
     </item>
   </channel>
